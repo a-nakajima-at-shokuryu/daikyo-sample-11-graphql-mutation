@@ -113,6 +113,7 @@ const root = {
         let dat = JSON.parse(fs.readFileSync(jsonpath, 'utf8'))
 
         // idに一致する要素を削除する
+        // （idが一致しないデータのみフィルタリング）
         dat = dat.filter(item => item.id !== id)
 
         // jsonファイルの書き込み
